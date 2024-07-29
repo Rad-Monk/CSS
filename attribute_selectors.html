@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [type='radio'] {
+            margin: 10px 0px 10px 0px;
+        }
+
+        [type='checkbox'] {
+            margin: 1em 0em 1em 0em;
+        }
+
+
+        body {
+            background-color: #414141;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>upgraded template for learning css</h1>
+    <img src="https://images.pexels.com/photos/6709/vintage-grey-airplane-plane.jpg" alt="cannot reach photo"
+        width="360px">
+    <p>What you can observe from this image:</p>
+    <ul>
+        <li class="dynamic-font">crashed airplane</li>
+        <li>barren land</li>
+        <li>no-one survived</li>
+    </ul>
+    <form action="/submit-image">
+        <label><input type="radio" name="barren-populated" checked> Barren</label>
+        <label><input type="radio" name="barren-populated"> Populated</label><br>
+        <label><input type="checkbox" name="life" checked> Alive</label>
+        <label><input type="checkbox" name="life"> Dead</label>
+        <br>
+        <input type="text" placeholder="image URL" required>
+        <button type="submit">Submit</button>
+</body>
+
+</html>
