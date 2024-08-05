@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #414141;
+        }
+
+        .d1 {
+            background-color: aqua;
+            grid-area: header;
+        }
+
+        .d2 {
+            background-color: azure;
+            grid-area: advert;
+        }
+
+        .d3 {
+            background-color: rgb(202, 244, 63);
+            grid-area: content;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            /* grid-template-rows: auto auto; */
+        }
+
+        .d1-1 {
+            background-color: #f94949;
+
+        }
+
+        .d1-2 {
+            background-color: #832828;
+
+        }
+
+        .d4 {
+            background-color: #f94949;
+            grid-area: footer;
+        }
+
+        .container {
+            font-size: 25px;
+            min-height: 300px;
+            display: grid;
+            background: #fe67d8;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto 3fr auto;
+            grid-gap: 10px;
+            grid-template-areas:
+                "header header"
+                "advert advert"
+                "content content"
+                "footer footer";
+        }
+
+        @media (min-width: 300px) {
+            .container {
+                grid-template-columns: auto 1fr;
+                grid-template-rows: auto 3fr auto;
+                grid-template-areas:
+                    "advert header"
+                    "advert content"
+                    "advert footer";
+            }
+        }
+
+        @media (min-width: 400px) {
+            .container {
+                /* grid-template-columns: 1fr 2fr;
+                grid-template-rows: 50px auto auto 50px; */
+                grid-template-areas:
+                    "header header"
+                    "advert content"
+                    "footer footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d1">header</div>
+        <div class="d2">advert</div>
+        <div class="d3">
+            <div class="d1-1">paragraph 1</div>
+            <div class="d1-2">paragraph 2</div>
+        </div>
+        <div class="d4">footer</div>
+    </div>
+</body>
+
+</html>

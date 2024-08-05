@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        body {
+            background-color: #414141;
+        }
+
+        .d1 {
+            background-color: aqua;
+        }
+
+        .d2 {
+            background-color: azure;
+        }
+
+        .d3 {
+            background-color: rgb(68, 193, 15);
+            /* justify-self: center; */
+            /* align-self: end; */
+        }
+
+        .d4 {
+            background-color: #bc0f0f;
+        }
+
+        .d5 {
+            background-color: aquamarine;
+            /* grid-column: 2/4;
+            grid-row: 2/4; */
+            /* grid-area: 3/1/4/4; */
+        }
+
+        .container {
+            font-size: 35px;
+            min-height: 300px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            /* this reprresent how many columns it would be divide into, so 3 auto means 3 columns  */
+            grid-template-rows: 1fr 1fr 1fr;
+            /* grid-column-gap: 5px;
+            grid-row-gap: 5px; */
+            grid-gap: 10px;
+            /* align-items: center; */
+
+            grid-template-areas:
+                "header header header"
+                ". content content"
+                "footer footer footer";
+        }
+
+        .container-2 {
+            width: 100%;
+            font-size: 35px;
+            min-height: 300px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+    </div>
+    <div class="container-2">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>
+    </div>
+
+</body>
+
+</html>
